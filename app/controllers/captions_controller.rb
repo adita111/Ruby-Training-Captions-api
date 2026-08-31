@@ -11,14 +11,13 @@ class CaptionsController < ApplicationController
   end
 
   def create
-    caption = Caption.create(caption_params)
+    caption = CaptionService.create(caption_params)
 
     render json: caption, status: :created
   end
 
   def destroy
-    caption = Caption.find(params[:id])
-    caption.destroy
+    CaptionService.destroy(params[:id])
 
     head :no_content
   end
