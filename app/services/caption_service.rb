@@ -1,3 +1,5 @@
+
+#Create and destroy Caption
 class CaptionService
   def self.create(params)
     Caption.create(params)

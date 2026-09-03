@@ -2,6 +2,7 @@ require "uri"
 require "net/http"
 require "securerandom"
 
+#Image downloader
 class ImageDownloader
   def self.download(url)
     uri = URI.parse(url)
